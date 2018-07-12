@@ -44,7 +44,6 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-
          it('name is defined', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
@@ -81,25 +80,51 @@ $(function() {
             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
     });
-    /* TODO: Write a new test suite named "Initial Entries" */
 
-    describe('Initial Entries', function() { 
+    /* TODO: Write a new test suite named "Initial Entries" */
+    describe('Initial Entries', function() {
+
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-
-        xit('checks for at least one entry');
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                done();
+            });
+        });
+        
+        it('checks for at least one entry', function(done) {
+            expect($('.feed .entry')).not.toBe('');
+            done();
+        });
     });
-    /* TODO: Write a new test suite named "New Feed Selection" */
 
+    /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        xit('feed loaded');
+        // from https://knowledge.udacity.com/questions/1667
+        let firstFeed, secondFeed;
+
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                firstFeed = $('.entry-link').html();
+            });
+
+            loadFeed(1,function() {
+                secondFeed = $('.entry-link').html();
+                done();
+            });
+        });
+
+        it('new feed loaded',function(done) {
+            expect(firstFeed).not.toBe(secondFeed);
+            done();
+        });
     });
 }());
