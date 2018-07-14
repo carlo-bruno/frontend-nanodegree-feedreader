@@ -73,10 +73,9 @@ $(function() {
         it('shows when clicked', function() {
             const menu = $('.menu-icon-link');
 
-            menu.trigger('click');
+            menu.trigger('click'); //click to show
             expect($('body').hasClass('menu-hidden')).toBe(false);
-
-            menu.trigger('click');
+            menu.trigger('click'); // click to hide
             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
     });
@@ -109,13 +108,16 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         // from https://knowledge.udacity.com/questions/1667
+        // create 2 variables to compare
         let firstFeed, secondFeed;
 
         beforeEach(function(done) {
+            // load first feed (index 0) and store it to the first variable
             loadFeed(0, function() {
                 firstFeed = $('.entry-link').html();
             });
-
+            
+            // call store second feed
             loadFeed(1,function() {
                 secondFeed = $('.entry-link').html();
                 done();

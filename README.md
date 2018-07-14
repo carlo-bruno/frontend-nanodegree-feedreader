@@ -1,48 +1,58 @@
-# Project Overview
+# UdaciFeeds
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+## Carlo Bruno | Udacity Front End Nanodegree
+### Project \#4 Feed Reader Testing
 
+[DEMO](https://carlo-bruno.github.io/frontend-nanodegree-feedreader/)
 
-## Why this Project?
+## Table of Contents
 
-Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
-
-Whether you work in an organization that uses test-driven development or in an organization that uses tests to make sure future feature development doesn't break existing features, it's an important skill to have!
-
-
-## What will I learn?
-
-You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
+* [Introduction](#introduction)
+* [How it Works](#how-it-works)
+* [Built With](#built-with)
 
 
-## How will this help my career?
+## Introduction
 
-* Writing effective tests requires analyzing multiple aspects of an application including the HTML, CSS and JavaScript - an extremely important skill when changing teams or joining a new company.
-* Good tests give you the ability to quickly analyze whether new code breaks an existing feature within your codebase, without having to manually test all of the functionality.
+This is a simple RSS Feed Reader web app that gathers article links from four different websites, namely the [Udacity Blog](http://blog.udacity.com/), [CSS-Tricks](https://css-tricks.com/),HTML5 Rocks (now [Web Fundamentals by Google](https://developers.google.com/web/), and [Linear Digression](http://lineardigressions.com/) podcast.
 
+The purpose of this project is to familiarize students to Test-Driven Development ([TDD](https://en.wikipedia.org/wiki/Test-driven_development)) using the Jasmine JS framework.
 
-# How will I complete this project?
+### A Udacity Project
 
-Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric)
+Project forked from [Udacity](https://github.com/udacity/frontend-nanodegree-feedreader)
 
-1. Take the JavaScript Testing [course](https://www.udacity.com/course/ud549)
-2. Download the [required project assets](http://github.com/udacity/frontend-nanodegree-feedreader).
-3. Review the functionality of the application within your browser.
-4. Explore the application's HTML (**./index.html**), CSS (**./css/style.css**) and JavaScript (**./js/app.js**) to gain an understanding of how it works.
-5. Explore the Jasmine spec file in **./jasmine/spec/feedreader.js** and review the [Jasmine documentation](http://jasmine.github.io).
-6. Edit the `allFeeds` variable in **./js/app.js** to make the provided test fail and see how Jasmine visualizes this failure in your application.
-7. Return the `allFeeds` variable to a passing state.
-8. Write a test that loops through each feed in the `allFeeds` object and ensures it has a URL defined and that the URL is not empty.
-9. Write a test that loops through each feed in the `allFeeds` object and ensures it has a name defined and that the name is not empty.
-10. Write a new test suite named `"The menu"`.
-11. Write a test that ensures the menu element is hidden by default. You'll have to analyze the HTML and the CSS to determine how we're performing the hiding/showing of the menu element.
-12. Write a test that ensures the menu changes visibility when the menu icon is clicked. This test should have two expectations: does the menu display when clicked and does it hide when clicked again.
-13. Write a test suite named `"Initial Entries"`.
-14. Write a test that ensures when the `loadFeed` function is called and completes its work, there is at least a single `.entry` element within the `.feed` container.
-15. Write a test suite named `"New Feed Selection"`.
-16. Write a test that ensures when a new feed is loaded by the `loadFeed` function that the content actually changes.
-17. No test should be dependent on the results of another.
-18. Callbacks should be used to ensure that feeds are loaded before they are tested.
-19. Implement error handling for undefined variables and out-of-bound array access.
-20. When complete - all of your tests should pass. 
-21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+In this project, we are given a web-based application that reads RSS feeds. The project already includes the [Jasmine](http://jasmine.github.io/) framework. Udacity also provided the page's _index.html_ as well as the stylings within the _css_ folder.
+
+The page also comes with defined classes that work with the included JavaScript file.
+
+_app.js_ contains the RSS feed reader app. We are using jQuery for selecting and working with our DOM elements. We are also using Handlebars.js as a template to render the data from our AJAX request into our HTML.
+
+Students are expected to work on the _feedreader.js_ file for this project. Starting file includes the first test suite, the first spec, as well as _TODO_ comments to guide the developers.
+
+## How it Works
+
+On the Wep App, simply select the feed that you would like to show from the menu button on the top left-hand corner. The articles from the selected website will be reloaded to the page.
+
+The site's footer contains the Jasmine Test Output where we can see the test specifications (or _specs_).
+
+### [Project Rubric](https://review.udacity.com/#!/rubrics/18/view)
+
+## Built With
+
++ HTML
++ CSS
++ JavaScript
+
+### Toolkits
++ Google Fonts [Roboto](https://fonts.google.com/specimen/Roboto)
++ [IcoMoon](https://icomoon.io/) icons
++ [jQuery](https://jquery.com/) Javascript Library (v2.1.1)
++ [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework (v2.1.2)
++ [Handlebars.js](https://handlebarsjs.com/) JavaScript Templating Engine (v2.0.0)
+
+### Tutorials and Ideas
++ [TLDR Jasmine Tutorial](https://www.youtube.com/watch?v=h2eWfvcAOTI&t=1254s) by Dylan Israel
++ [Unit Testing In JavaScript via Jasmine](https://www.youtube.com/watch?v=eVpXkyN0zOE) by Jesse Warden
++ Udacity Knowledge Forum [Question](https://knowledge.udacity.com/questions/1667) regarding async callbacks (last spec)
+
