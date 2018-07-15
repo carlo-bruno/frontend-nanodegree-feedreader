@@ -89,7 +89,7 @@ $(function() {
             // load first feed (index 0) and store it to the first variable
             loadFeed(0, function() {
                 firstFeed = $('.entry-link').html();
-                
+                done();
                 // load next feed now that the first feed recieved data from the server
                 loadFeed(1,function() {
                     secondFeed = $('.entry-link').html();
