@@ -14,7 +14,7 @@
 
 ## Introduction
 
-This is a simple RSS Feed Reader web app that gathers article links from four different websites, namely the [Udacity Blog](http://blog.udacity.com/), [CSS-Tricks](https://css-tricks.com/),HTML5 Rocks (now [Web Fundamentals by Google](https://developers.google.com/web/), and [Linear Digression](http://lineardigressions.com/) podcast.
+This is a simple RSS Feed Reader web app that gathers article links from four different websites, namely the [Udacity Blog](http://blog.udacity.com/), [CSS-Tricks](https://css-tricks.com/),HTML5 Rocks (now [Web Fundamentals by Google](https://developers.google.com/web/)), and [Linear Digression](http://lineardigressions.com/) podcast.
 
 The purpose of this project is to familiarize students to Test-Driven Development ([TDD](https://en.wikipedia.org/wiki/Test-driven_development)) using the Jasmine JS framework.
 
@@ -32,9 +32,17 @@ Students are expected to work on the _feedreader.js_ file for this project. Star
 
 ## How it Works
 
-On the Wep App, simply select the feed that you would like to show from the menu button on the top left-hand corner. The articles from the selected website will be reloaded to the page.
+_feedreader.js_ contains test functions (called _specs_) that I have grouped by similar functionalities (known as _test suites_). Each spec is written to target certain parts of the site, making sure that they are properly defined, properly shown (or hidden), and that different contents are loaded as expected.
 
-The site's footer contains the Jasmine Test Output where we can see the test specifications (or _specs_).
+Check the Github pages [DEMO](https://carlo-bruno.github.io/frontend-nanodegree-feedreader/).
+
+### Running this project locally
+
+1. Clone or download ZIP file of this repo.
+2. Simply open _index.html_ file in your browser.
+
+The Jasmine Test Output panel can be seen as the site's footer, showing the test specifications. To modify the Jasmine Test, open _feedreader.js_ within _/jasmine/spec/_ folder.
+
 
 ### [Project Rubric](https://review.udacity.com/#!/rubrics/18/view)
 
